@@ -1,0 +1,72 @@
+<header class="border-b border-gray-300 bg-white px-4 py-3">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4">
+    <span class="font-semibold">CRM агентства</span>
+    <div class="flex items-center gap-3 text-sm">
+      <span>{{ auth.user()?.username }}</span>
+      <button class="button" [disabled]="loggingOut()" (click)="logout()">Выйти</button>
+    </div>
+  </div>
+</header>
+<main class="mx-auto max-w-6xl p-4">
+  <div class="mb-5 flex flex-wrap items-center justify-between gap-3">
+    <h1 class="text-2xl font-semibold">Заявки</h1>
+    <div class="flex flex-wrap gap-2">
+      <button class="button" [disabled]="loading()" (click)="load()">{{ loading() ? 'Загружаем…' : 'Обновить' }}</button>
+      <button class="button primary" (click)="createLead.set(true)">Добавить лид</button>
+    </div>
+  </div>
+  <section class="mb-4 border border-gray-300 bg-white p-3" aria-label="Теги заявок">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="mr-1 text-sm">Фильтр по тегу:</span>
+      <nav aria-label="Фильтр по тегу" class="flex flex-wrap gap-2">
+        <button class="filter-button" [class.selected]="filter() === null" [attr.aria-pressed]="filter() === null" [disabled]="loading()" (click)="selectTag(null)">Все заявки</button>
+        @for (tag of tags(); track tag.id) {
+          <button class="filter-button" [class.selected]="filter() === tag.id" [attr.aria-pressed]="filter() === tag.id" [disabled]="loading()" (click)="selectTag(tag.id)">{{ tag.name }}</button>
+        }
+      </nav>
+      <button class="button" [disabled]="loading()" (click)="createTag.set(true)">Создать тег</button>
+    </div>
+  </section>
+  @if (notice()) { <p class="notice mb-4" role="status">{{ notice() }}</p> }
+  @if (error()) { <p class="error mb-4" role="alert">{{ error() }} <button class="underline" (click)="load()">Повторить</button></p> }
+  <section class="border border-gray-300 bg-white" aria-label="Список лидов" [attr.aria-busy]="loading()">
+    <p class="border-b border-gray-300 px-3 py-2 text-sm">{{ filter() ? 'С выбранным тегом' : 'Всего заявок' }}: {{ data().count }}</p>
+    @if (loading()) {
+      <p class="p-6 text-sm text-gray-600" role="status">Загружаем заявки…</p>
+    } @else if (error()) {
+      <div class="p-6"><h2 class="font-semibold">Не удалось загрузить заявки</h2><p class="mt-2 text-sm">Повторите запрос, когда связь восстановится.</p></div>
+    } @else if (data().results.length) {
+      <div class="overflow-x-auto">
+        <table class="w-full min-w-[700px] border-collapse text-left text-sm">
+          <thead class="bg-gray-100"><tr><th class="w-1/4">Имя / контакт</th><th class="w-1/3">Запрос</th><th>Теги</th><th>Источник / дата</th></tr></thead>
+          <tbody>
+            @for (lead of data().results; track lead.id) {
+              <tr>
+                <td><div class="font-medium break-all">{{ lead.name }}</div><div class="mt-1 break-all text-gray-600">{{ lead.contact }}</div></td>
+                <td><p class="max-h-40 overflow-y-auto whitespace-pre-wrap break-words">{{ lead.request }}</p></td>
+                <td><div class="flex flex-wrap items-center gap-1">
+                  @for (tag of lead.tags; track tag.id) { <span class="border border-gray-300 bg-gray-100 px-2 py-1 text-xs break-all">{{ tag.name }}</span> }
+                  <button class="button" aria-label="Назначить теги" [title]="'Теги: ' + lead.name" (click)="editing.set(lead)">Изменить</button>
+                </div></td>
+                <td><span>{{ lead.source === 'telegram_bot' ? 'Telegram' : 'Вручную' }}</span><div class="mt-1 whitespace-nowrap text-xs text-gray-600">{{ lead.created_at | date:'dd.MM.yyyy, HH:mm' }}</div></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+      <footer class="flex items-center justify-between gap-3 border-t border-gray-300 p-3 text-sm">
+        <span>Страница {{ page() }}</span>
+        <div class="flex gap-2"><button class="button" [disabled]="!data().previous || loading()" (click)="changePage(-1)">Назад</button><button class="button" [disabled]="!data().next || loading()" (click)="changePage(1)">Далее</button></div>
+      </footer>
+    } @else {
+      <div class="p-6">
+        <h2 class="font-semibold">{{ filter() ? 'Нет заявок с этим тегом' : 'Пока нет заявок' }}</h2>
+        <p class="mt-2 text-sm text-gray-600">{{ filter() ? 'Выберите другой тег или откройте все заявки.' : 'Добавьте лид вручную или отправьте заявку Telegram-боту.' }}</p>
+        @if (!filter()) { <button class="button primary mt-4" (click)="createLead.set(true)">Добавить первый лид</button> }
+      </div>
+    }
+  </section>
+</main>
+@if (createLead()) { <crm-create-lead (closed)="createLead.set(false)" (saved)="addedLead()" (expired)="expired()" /> }
+@if (createTag()) { <crm-create-tag (closed)="createTag.set(false)" (saved)="addedTag()" (expired)="expired()" /> }
+@if (editing(); as lead) { <crm-assign-tags [lead]="lead" [tags]="tags()" (closed)="editing.set(null)" (saved)="assignedTags()" (expired)="expired()" /> }
