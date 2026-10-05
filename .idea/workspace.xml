@@ -4,37 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9501122-fa3a-4d13-8292-127924bd26e7" name="Changes" comment="add ignore file">
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/.postcssrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/e2e/crm.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/playwright.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/proxy.conf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/app/root.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/app/routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/entities/lead/lead.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/entities/lead/lead.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/entities/tag/tag.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/entities/tag/tag.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/entities/user/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/features/assign-tags/assign-tags.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/features/create-lead/create-lead.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/features/create-tag/create-tag.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/features/sign-in/sign-in.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/pages/leads/leads.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/pages/leads/leads.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/pages/login/login.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/shared/api/api.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/app/shared/ui/modal.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/frontend/tsconfig.json" afterDir="false" />
+    <list default="true" id="c9501122-fa3a-4d13-8292-127924bd26e7" name="Changes" comment="dev: fix files, duplicate folder frontend">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/test_bot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose.local.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/app/root.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/app/routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/entities/lead/lead.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/entities/lead/lead.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/entities/tag/tag.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/entities/tag/tag.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/entities/user/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/features/assign-tags/assign-tags.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/features/create-lead/create-lead.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/features/create-tag/create-tag.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/features/sign-in/sign-in.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/pages/leads/leads.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/pages/login/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/shared/api/api.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/app/shared/ui/modal.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tsconfig.app.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/.postcssrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.postcssrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/e2e/crm.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/e2e/crm.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/playwright.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/playwright.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/proxy.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/proxy.conf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/app/root.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/app/routes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/entities/lead/lead.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/entities/lead/lead.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/entities/tag/tag.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/entities/tag/tag.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/entities/user/auth.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/features/assign-tags/assign-tags.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/features/create-lead/create-lead.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/features/create-tag/create-tag.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/features/sign-in/sign-in.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/pages/leads/leads.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/pages/leads/leads.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/pages/leads/leads.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/pages/login/login.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/shared/api/api.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/app/shared/ui/modal.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,23 +67,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "eastsidekillas"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;eastsidekillas&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/eastsidekillas/test-work-crm.git",
-    "accountId": "ee87c16c-8d57-4cea-859b-6b34dca5b86a"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/eastsidekillas/test-work-crm.git&quot;,
+    &quot;accountId&quot;: &quot;ee87c16c-8d57-4cea-859b-6b34dca5b86a&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="3KGJJh0hKbktiu8CSp82aWDvruA" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,8 +100,9 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "dev-f",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/tta-biznpro/WebProjects/MyProjects/test-work-crm/frontend",
     "node.js.detected.package.eslint": "true",
@@ -86,6 +117,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/frontend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -102,7 +137,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1791177900980</updated>
-      <workItem from="1791177902056" duration="2835000" />
+      <workItem from="1791177902056" duration="3738000" />
+      <workItem from="1791182975559" duration="274000" />
     </task>
     <task id="LOCAL-00001" summary="add ignore file">
       <option name="closed" value="true" />
@@ -112,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1791178020099</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add angular app">
+      <option name="closed" value="true" />
+      <created>1791182439246</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1791182439246</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +178,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add ignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ignore file" />
+    <MESSAGE value="dev-f: fix files, duplicate folder frontend" />
+    <MESSAGE value="add angular app" />
+    <MESSAGE value="dev: fix files, duplicate folder frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="dev: fix files, duplicate folder frontend" />
   </component>
 </project>

@@ -1,0 +1,14 @@
+# Local HTTP preview; production compose.yaml remains HTTPS-only.
+services:
+  backend:
+    environment:
+      DJANGO_DEBUG: "1"
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend
+      DJANGO_CSRF_TRUSTED_ORIGINS: http://localhost:8080,http://127.0.0.1:8080
+  init:
+    environment:
+      DJANGO_DEBUG: "1"
+      DJANGO_ALLOWED_HOSTS: localhost,127.0.0.1,backend
+  web:
+    ports:
+      - "127.0.0.1:8080:80"
