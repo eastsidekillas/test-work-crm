@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer base {
+  body { @apply m-0 bg-gray-100 font-sans text-gray-900; }
+  button { @apply cursor-pointer disabled:cursor-default disabled:opacity-50; }
+  button:focus-visible, input:focus-visible, textarea:focus-visible {
+    @apply outline-2 outline-offset-2 outline-blue-600;
+  }
+  th, td { @apply border-b border-gray-200 p-3 align-top; }
+  th { @apply font-medium; }
+  dialog {
+    @apply m-auto w-[calc(100%-2rem)] max-w-lg max-h-[calc(100dvh-2rem)] overflow-y-auto border border-gray-300 bg-white p-5 text-gray-900;
+  }
+  dialog::backdrop { @apply bg-black/40; }
+}
+
+@layer components {
+  .button { @apply inline-flex min-h-9 items-center justify-center rounded border border-gray-400 bg-white px-3 py-2 text-sm hover:bg-gray-100; }
+  .button.primary { @apply border-blue-600 bg-blue-600 text-white hover:bg-blue-700; }
+  .filter-button { @apply min-h-9 rounded border border-gray-300 bg-white px-3 py-2 text-sm break-all hover:bg-gray-100; }
+  .filter-button.selected { @apply border-blue-600 bg-blue-50 text-blue-700; }
+  .field-label { @apply flex flex-col gap-2 text-sm; }
+  .field-label input, .field-label textarea { @apply w-full rounded border border-gray-400 bg-white p-2 text-base; }
+  .field-label textarea { @apply resize-y; }
+  .modal-actions { @apply flex flex-wrap justify-end gap-2 pt-2; }
+  .check-label { @apply flex items-center gap-2 py-2 text-sm break-all; }
+  .check-label input { @apply size-4 shrink-0 accent-blue-600; }
+  .icon-button { @apply size-8 text-gray-600 hover:bg-gray-100; }
+  .muted { @apply text-gray-600; }
+  .error { @apply border border-red-300 bg-red-50 p-3 text-sm text-red-800; }
+  .notice { @apply border border-green-300 bg-green-50 p-3 text-sm text-green-800; }
+}
